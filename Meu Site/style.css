@@ -1,0 +1,137 @@
+body{
+    background-color: #0F172A;
+    font-family: 'Rubik', sans-serif;    
+    color: white;
+    /* display: flex; */
+    overflow: hidden;   
+    
+}
+p{
+    color: #8796B0;
+    word-spacing: 0.2em;
+}
+header{
+    justify-content: space-between;
+    height: 800px;
+}
+
+
+
+
+main {
+  scroll-behavior: smooth;
+  margin-left: 300px;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  width: calc(100% - 300px);
+}
+section {
+  margin-top: 200px;
+}
+
+h4{
+    font-size: 0.8em;
+}
+a{
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    width: 100px;
+}
+a:hover{
+    font-size: 1.2em;
+    width: 100px;
+}
+
+.icones {
+    display: flex;
+    
+    
+}
+.icones a img{
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.icones a img:hover{
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+#caixa_esq {
+  width: 300px;
+  height: 100vh;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Garante que fique acima do conteúdo */
+  padding: 60px;
+  overflow-y: auto;
+}
+
+
+#about, #experiencia, #projetos, #contato{
+width: 100%;
+padding: 80px 20px;
+margin-top:100px;
+height: 800px;
+}
+
+/* cartao interativo */
+.card-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* faz quebrar pra próxima linha se não couber */
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background-color: #1E293B;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+  
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.hidden-text {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover .hidden-text {
+  opacity: 1;
+  max-height: 100px; /* aumenta para mostrar o texto */
+  margin-top: 10px;
+}
+
+
+/* Luz em volta do ponteiro do mouse */
+#light {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(110, 151, 212, 0.1); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); 
+    pointer-events: none; 
+    transform: translate(-50%, -50%); 
+    filter: blur(20px);
+    opacity: 0.7;
+    background: radial-gradient(circle, rgba(110, 152, 241, 0.2) 10%,rgba(94, 115, 134, 0) 90%);
+    
+}
+
