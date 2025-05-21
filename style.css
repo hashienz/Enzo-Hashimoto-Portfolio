@@ -15,6 +15,9 @@ header{
     height: 800px;
 }
 
+
+
+
 main {
   scroll-behavior: smooth;
   margin-left: 300px;
@@ -72,11 +75,48 @@ a:hover{
 #about, #experiencia, #projetos, #contato{
 width: 100%;
 padding: 80px 20px;
-/* background-color: #1E293B; */
 margin-top:100px;
 height: 800px;
 }
 
+/* cartao interativo */
+.card-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* faz quebrar pra próxima linha se não couber */
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background-color: #1E293B;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+  
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.hidden-text {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover .hidden-text {
+  opacity: 1;
+  max-height: 100px; /* aumenta para mostrar o texto */
+  margin-top: 10px;
+}
 
 
 /* Luz em volta do ponteiro do mouse */
